@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <InfoConfig>
+    <line index="1" name="BC1" plcIP="192.168.1.1" threaCount="1" updateRate="50" heartBeatAddr="DB6000.DBX0.0" packOrNot="1" plcAgvIP="" agvBeatAddr="DB6001.DBX2.0" sparePlcIp="" sparePlcBeatAddr="" Initialize="DB6000.DBX0.2">
+      <station index="0" name="OP10-1" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="2" stationTime="10000">
+        <alarm>
+          <item type="93" detail="加载产品配方失败，请检查该工位的配方是否正确！" />
+          <item type="94" detail="该总成已不合格！" />
+          <item type="95" detail="该总成没有对应的详细配方，请检查配方步序是否连续" />
+          <item type="96" detail="更新工位信息失败，请重新扫描" />
+          <item type="97" detail="小车上没有绑定总成" />
+          <item type="98" detail="校验总成出错，请检查校验规则" />
+          <item type="99" detail="解析总成号出错，请检查扫描的内容是否有误" />
+          <item type="100" detail="员工号校验失败，请检查配方当前步配置，或重新扫描" />
+          <item type="101" detail="追溯失败" />
+          <item type="102" detail="图号对比不通过" />
+          <item type="103" detail="小车号校验错误" />
+          <item type="104" detail="发动机号匹配出错，请检查配置" />
+          <item type="105" detail="没有扫描总成，请先扫描总成" />
+          <item type="106" detail="变速箱码匹配出错，请检查配置" />
+          <item type="107" detail="扭矩追溯失败！" />
+          <item type="108" detail="拧紧数据有为空！" />
+          <item type="109" detail="拧紧不合格！" />
+          <item type="110" detail="跳步失败，没有扫描总成！" />
+          <item type="111" detail="未知错误" />
+          <item type="112" detail="条码校验失败" />
+          <item type="113" detail="线外站触摸屏没有填入产品类型" />
+          <item type="114" detail="没有为线外站当前产品类型配置校验规则！" />
+          <item type="115" detail="获取PACK的PN号失败！" />
+          <item type="116" detail="申请总成号失败！" />
+        </alarm>
+        <dataitem addr="DB6000.DBW1400" name="Control" type="" standard="控制字" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW1402" name="PC_Control" type="" standard="PC控制字" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW1406" name="ErrorCode" type="" standard="错误代码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB202.98" name="VIN" type="" standard="Pack总成号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB302.98" name="EngineSN" type="" standard="发动机条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB402.98" name="GearboxSN" type="" standard="变速箱条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB502.98" name="TypeName" type="" standard="产品型号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB602.38" name="TrayNum" type="" standard="托盘号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW640" name="productNum" type="" standard="产品类别" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW642" name="ReqStep" type="" standard="请求步数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW644" name="ReqTool" type="" standard="请求步工具号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW646" name="ReqQuan" type="" standard="请求步数量" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW648" name="ReqFixt" type="" standard="请求步套筒号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW650" name="ReqPrNo" type="" standard="请求步程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW652" name="ReqReWK" type="" standard="请求步返工次数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW654" name="ReqBoltNumber" type="" standard="请求步螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW656" name="PreviousStation" type="" standard="前工位状态" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW658" name="ReqStepType" type="" standard="当前步类型说明" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB902.18" name="Torque" type="" standard="扭矩" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB922.18" name="Angle" type="" standard="角度" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB942.18" name="ProgNum" type="" standard="程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB962.18" name="CycleNum" type="" standard="循环号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB982.18" name="Result" type="" standard="结果" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW1000" name="BoltNumber" type="" standard="螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB1302.98" name="ScanCode" type="" standard="扫描枪扫描内容" result="" reviewColumn="" reviewTable="" />
+        <opcitem addr="DB6000.DBW1400" name="控制字" type="PLC01" />
+      </station>
+      <station index="1" name="OP10-2" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="0" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="0" stationTime="10000">
+        <dataitem addr="DB6000.DBW3402" name="PC_Control" type="" standard="PC控制字" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB2202.98" name="VIN" type="" standard="Pack总成号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB2302.98" name="EngineSN" type="" standard="发动机条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB2402.98" name="GearboxSN" type="" standard="变速箱条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB2502.98" name="TypeName" type="" standard="产品型号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB2602.38" name="TrayNum" type="" standard="托盘号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW2640" name="productNum" type="" standard="产品类别" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW2642" name="ReqStep" type="" standard="请求步数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW2644" name="ReqTool" type="" standard="请求步工具号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW2646" name="ReqQuan" type="" standard="请求步数量" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW2648" name="ReqFixt" type="" standard="请求步套筒号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW2650" name="ReqPrNo" type="" standard="请求步程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW2652" name="ReqReWK" type="" standard="请求步返工次数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW2654" name="ReqBoltNumber" type="" standard="请求步螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW2656" name="PreviousStation" type="" standard="前工位状态" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW2658" name="ReqStepType" type="" standard="当前步类型说明" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB2902.18" name="Torque" type="" standard="扭矩" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB2922.18" name="Angle" type="" standard="角度" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB2942.18" name="ProgNum" type="" standard="程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB2962.18" name="CycleNum" type="" standard="循环号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB2982.18" name="Result" type="" standard="结果" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW3000" name="BoltNumber" type="" standard="螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB3302.98" name="ScanCode" type="" standard="扫描枪扫描内容" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW3406" name="ErrorCode" type="" standard="错误代码" result="" reviewColumn="" reviewTable="" />
+        <opcitem addr="DB6000.DBW3400" name="PLC_Control" type="PLC01" />
+        <alarm>
+          <item type="93" detail="加载产品配方失败，请检查该工位的配方是否正确！" />
+          <item type="94" detail="该总成已不合格！" />
+          <item type="95" detail="该总成没有对应的详细配方，请检查配方步序是否连续" />
+          <item type="96" detail="更新工位信息失败，请重新扫描" />
+          <item type="97" detail="小车上没有绑定总成" />
+          <item type="98" detail="校验总成出错，请检查校验规则" />
+          <item type="99" detail="解析总成号出错，请检查扫描的内容是否有误" />
+          <item type="100" detail="员工号校验失败，请检查配方当前步配置，或重新扫描" />
+          <item type="101" detail="追溯失败" />
+          <item type="102" detail="图号对比不通过" />
+          <item type="103" detail="小车号校验错误" />
+          <item type="104" detail="发动机号匹配出错，请检查配置" />
+          <item type="105" detail="没有扫描总成，请先扫描总成" />
+          <item type="106" detail="变速箱码匹配出错，请检查配置" />
+          <item type="107" detail="扭矩追溯失败！" />
+          <item type="108" detail="拧紧数据有为空！" />
+          <item type="109" detail="拧紧不合格！" />
+          <item type="110" detail="跳步失败，没有扫描总成！" />
+          <item type="111" detail="未知错误" />
+          <item type="112" detail="条码校验失败" />
+          <item type="113" detail="线外站触摸屏没有填入产品类型" />
+          <item type="114" detail="没有为线外站当前产品类型配置校验规则！" />
+        </alarm>
+      </station>
+      <station index="2" name="OP10-3" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="0" stationTime="10000" />
+      <station index="3" name="OP10-4" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="0" stationTime="10000" />
+      <station index="4" name="OP30" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="0" stationTime="10000">
+        <opcitem addr="DB6000.DBW5400" name="PLC_Control" type="PLC01" />
+        <dataitem addr="DB6000.DBW5402" name="PC_Control" type="" standard="PC控制字" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB4202.98" name="VIN" type="" standard="Pack总成号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB4302.98" name="EngineSN" type="" standard="发动机条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB4402.98" name="GearboxSN" type="" standard="变速箱条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB4502.98" name="TypeName" type="" standard="产品型号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB4602.38" name="TrayNum" type="" standard="托盘号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW4640" name="productNum" type="" standard="产品类别" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW4642" name="ReqStep" type="" standard="请求步数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW4644" name="ReqTool" type="" standard="请求步工具号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW4646" name="ReqQuan" type="" standard="请求步数量" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW4648" name="ReqFixt" type="" standard="请求步套筒号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW4650" name="ReqPrNo" type="" standard="请求步程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW4652" name="ReqReWK" type="" standard="请求步返工次数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW4654" name="ReqBoltNumber" type="" standard="请求步螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW4656" name="PreviousStation" type="" standard="前工位状态" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW4658" name="ReqStepType" type="" standard="当前步类型说明" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB4902.18" name="Torque" type="" standard="扭矩" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB4922.18" name="Angle" type="" standard="角度" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB4942.18" name="ProgNum" type="" standard="程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB4962.18" name="CycleNum" type="" standard="循环号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB4982.18" name="Result" type="" standard="结果" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW5000" name="BoltNumber" type="" standard="螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB5302.98" name="ScanCode" type="" standard="扫描枪扫描内容" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW5406" name="ErrorCode" type="" standard="错误代码" result="" reviewColumn="" reviewTable="" />
+        <alarm>
+          <item type="93" detail="加载产品配方失败，请检查该工位的配方是否正确！" />
+          <item type="94" detail="该总成已不合格！" />
+          <item type="95" detail="该总成没有对应的详细配方，请检查配方步序是否连续" />
+          <item type="96" detail="更新工位信息失败，请重新扫描" />
+          <item type="97" detail="小车上没有绑定总成" />
+          <item type="98" detail="校验总成出错，请检查校验规则" />
+          <item type="99" detail="解析总成号出错，请检查扫描的内容是否有误" />
+          <item type="100" detail="员工号校验失败，请检查配方当前步配置，或重新扫描" />
+          <item type="101" detail="追溯失败" />
+          <item type="102" detail="图号对比不通过" />
+          <item type="103" detail="小车号校验错误" />
+          <item type="104" detail="发动机号匹配出错，请检查配置" />
+          <item type="105" detail="没有扫描总成，请先扫描总成" />
+          <item type="106" detail="变速箱码匹配出错，请检查配置" />
+          <item type="107" detail="扭矩追溯失败！" />
+          <item type="108" detail="拧紧数据有为空！" />
+          <item type="109" detail="拧紧不合格！" />
+          <item type="110" detail="跳步失败，没有扫描总成！" />
+          <item type="111" detail="未知错误" />
+          <item type="112" detail="条码校验失败" />
+          <item type="113" detail="线外站触摸屏没有填入产品类型" />
+          <item type="114" detail="没有为线外站当前产品类型配置校验规则！" />
+        </alarm>
+      </station>
+      <station index="5" name="OP40" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="0" stationTime="10000">
+        <opcitem addr="DB6000.DBW7400" name="PLC_Control" type="PLC01" />
+        <dataitem addr="DB6000.DBW7402" name="PC_Control" type="" standard="PC控制字" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB6202.98" name="VIN" type="" standard="Pack总成号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB6302.98" name="EngineSN" type="" standard="发动机条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB6402.98" name="GearboxSN" type="" standard="变速箱条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB6502.98" name="TypeName" type="" standard="产品型号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB6602.38" name="TrayNum" type="" standard="托盘号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW6640" name="productNum" type="" standard="产品类别" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW6642" name="ReqStep" type="" standard="请求步数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW6644" name="ReqTool" type="" standard="请求步工具号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW6646" name="ReqQuan" type="" standard="请求步数量" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW6648" name="ReqFixt" type="" standard="请求步套筒号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW6650" name="ReqPrNo" type="" standard="请求步程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW6652" name="ReqReWK" type="" standard="请求步返工次数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW6654" name="ReqBoltNumber" type="" standard="请求步螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW6656" name="PreviousStation" type="" standard="前工位状态" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW6658" name="ReqStepType" type="" standard="当前步类型说明" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB6902.18" name="Torque" type="" standard="扭矩" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB6922.18" name="Angle" type="" standard="角度" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB6942.18" name="ProgNum" type="" standard="程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB6962.18" name="CycleNum" type="" standard="循环号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB6982.18" name="Result" type="" standard="结果" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW7000" name="BoltNumber" type="" standard="螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB7302.98" name="ScanCode" type="" standard="扫描枪扫描内容" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW7406" name="ErrorCode" type="" standard="错误代码" result="" reviewColumn="" reviewTable="" />
+        <alarm>
+          <item type="93" detail="加载产品配方失败，请检查该工位的配方是否正确！" />
+          <item type="94" detail="该总成已不合格！" />
+          <item type="95" detail="该总成没有对应的详细配方，请检查配方步序是否连续" />
+          <item type="96" detail="更新工位信息失败，请重新扫描" />
+          <item type="97" detail="小车上没有绑定总成" />
+          <item type="98" detail="校验总成出错，请检查校验规则" />
+          <item type="99" detail="解析总成号出错，请检查扫描的内容是否有误" />
+          <item type="100" detail="员工号校验失败，请检查配方当前步配置，或重新扫描" />
+          <item type="101" detail="追溯失败" />
+          <item type="102" detail="图号对比不通过" />
+          <item type="103" detail="小车号校验错误" />
+          <item type="104" detail="发动机号匹配出错，请检查配置" />
+          <item type="105" detail="没有扫描总成，请先扫描总成" />
+          <item type="106" detail="变速箱码匹配出错，请检查配置" />
+          <item type="107" detail="扭矩追溯失败！" />
+          <item type="108" detail="拧紧数据有为空！" />
+          <item type="109" detail="拧紧不合格！" />
+          <item type="110" detail="跳步失败，没有扫描总成！" />
+          <item type="111" detail="未知错误" />
+          <item type="112" detail="条码校验失败" />
+          <item type="113" detail="线外站触摸屏没有填入产品类型" />
+          <item type="114" detail="没有为线外站当前产品类型配置校验规则！" />
+        </alarm>
+      </station>
+      <station index="6" name="OP50" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="0" stationTime="10000">
+        <opcitem addr="DB6000.DBW9400" name="PLC_Control" type="PLC01" />
+        <dataitem addr="DB6000.DBW9402" name="PC_Control" type="" standard="PC控制字" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB8202.98" name="VIN" type="" standard="Pack总成号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB8302.98" name="EngineSN" type="" standard="发动机条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB8402.98" name="GearboxSN" type="" standard="变速箱条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB8502.98" name="TypeName" type="" standard="产品型号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB8602.38" name="TrayNum" type="" standard="托盘号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW8640" name="productNum" type="" standard="产品类别" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW8642" name="ReqStep" type="" standard="请求步数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW8644" name="ReqTool" type="" standard="请求步工具号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW8646" name="ReqQuan" type="" standard="请求步数量" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW8648" name="ReqFixt" type="" standard="请求步套筒号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW8650" name="ReqPrNo" type="" standard="请求步程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW8652" name="ReqReWK" type="" standard="请求步返工次数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW8654" name="ReqBoltNumber" type="" standard="请求步螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW8656" name="PreviousStation" type="" standard="前工位状态" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW8658" name="ReqStepType" type="" standard="当前步类型说明" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB8902.18" name="Torque" type="" standard="扭矩" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB8922.18" name="Angle" type="" standard="角度" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB8942.18" name="ProgNum" type="" standard="程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB8962.18" name="CycleNum" type="" standard="循环号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB8982.18" name="Result" type="" standard="结果" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW9000" name="BoltNumber" type="" standard="螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB9302.98" name="ScanCode" type="" standard="扫描枪扫描内容" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW9406" name="ErrorCode" type="" standard="错误代码" result="" reviewColumn="" reviewTable="" />
+        <alarm>
+          <item type="93" detail="加载产品配方失败，请检查该工位的配方是否正确！" />
+          <item type="94" detail="该总成已不合格！" />
+          <item type="95" detail="该总成没有对应的详细配方，请检查配方步序是否连续" />
+          <item type="96" detail="更新工位信息失败，请重新扫描" />
+          <item type="97" detail="小车上没有绑定总成" />
+          <item type="98" detail="校验总成出错，请检查校验规则" />
+          <item type="99" detail="解析总成号出错，请检查扫描的内容是否有误" />
+          <item type="100" detail="员工号校验失败，请检查配方当前步配置，或重新扫描" />
+          <item type="101" detail="追溯失败" />
+          <item type="102" detail="图号对比不通过" />
+          <item type="103" detail="小车号校验错误" />
+          <item type="104" detail="发动机号匹配出错，请检查配置" />
+          <item type="105" detail="没有扫描总成，请先扫描总成" />
+          <item type="106" detail="变速箱码匹配出错，请检查配置" />
+          <item type="107" detail="扭矩追溯失败！" />
+          <item type="108" detail="拧紧数据有为空！" />
+          <item type="109" detail="拧紧不合格！" />
+          <item type="110" detail="跳步失败，没有扫描总成！" />
+          <item type="111" detail="未知错误" />
+          <item type="112" detail="条码校验失败" />
+          <item type="113" detail="线外站触摸屏没有填入产品类型" />
+          <item type="114" detail="没有为线外站当前产品类型配置校验规则！" />
+        </alarm>
+      </station>
+      <station index="7" name="OP60" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="0" stationTime="10000">
+        <opcitem addr="DB6000.DBW11400" name="PLC_Control" type="PLC01" />
+        <dataitem addr="DB6000.DBW11402" name="PC_Control" type="" standard="PC控制字" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB10202.98" name="VIN" type="" standard="Pack总成号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB10302.98" name="EngineSN" type="" standard="发动机条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB10402.98" name="GearboxSN" type="" standard="变速箱条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB10502.98" name="TypeName" type="" standard="产品型号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB10602.38" name="TrayNum" type="" standard="托盘号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW10640" name="productNum" type="" standard="产品类别" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW10642" name="ReqStep" type="" standard="请求步数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW10644" name="ReqTool" type="" standard="请求步工具号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW10646" name="ReqQuan" type="" standard="请求步数量" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW10648" name="ReqFixt" type="" standard="请求步套筒号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW10650" name="ReqPrNo" type="" standard="请求步程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW10652" name="ReqReWK" type="" standard="请求步返工次数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW10654" name="ReqBoltNumber" type="" standard="请求步螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW10656" name="PreviousStation" type="" standard="前工位状态" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW10658" name="ReqStepType" type="" standard="当前步类型说明" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB10902.18" name="Torque" type="" standard="扭矩" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB10922.18" name="Angle" type="" standard="角度" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB10942.18" name="ProgNum" type="" standard="程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB10962.18" name="CycleNum" type="" standard="循环号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB10982.18" name="Result" type="" standard="结果" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW11000" name="BoltNumber" type="" standard="螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB11302.98" name="ScanCode" type="" standard="扫描枪扫描内容" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW11406" name="ErrorCode" type="" standard="错误代码" result="" reviewColumn="" reviewTable="" />
+        <alarm>
+          <item type="93" detail="加载产品配方失败，请检查该工位的配方是否正确！" />
+          <item type="94" detail="该总成已不合格！" />
+          <item type="95" detail="该总成没有对应的详细配方，请检查配方步序是否连续" />
+          <item type="96" detail="更新工位信息失败，请重新扫描" />
+          <item type="97" detail="小车上没有绑定总成" />
+          <item type="98" detail="校验总成出错，请检查校验规则" />
+          <item type="99" detail="解析总成号出错，请检查扫描的内容是否有误" />
+          <item type="100" detail="员工号校验失败，请检查配方当前步配置，或重新扫描" />
+          <item type="101" detail="追溯失败" />
+          <item type="102" detail="图号对比不通过" />
+          <item type="103" detail="小车号校验错误" />
+          <item type="104" detail="发动机号匹配出错，请检查配置" />
+          <item type="105" detail="没有扫描总成，请先扫描总成" />
+          <item type="106" detail="变速箱码匹配出错，请检查配置" />
+          <item type="107" detail="扭矩追溯失败！" />
+          <item type="108" detail="拧紧数据有为空！" />
+          <item type="109" detail="拧紧不合格！" />
+          <item type="110" detail="跳步失败，没有扫描总成！" />
+          <item type="111" detail="未知错误" />
+          <item type="112" detail="条码校验失败" />
+          <item type="113" detail="线外站触摸屏没有填入产品类型" />
+          <item type="114" detail="没有为线外站当前产品类型配置校验规则！" />
+        </alarm>
+      </station>
+      <station index="8" name="OP70" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="0" stationTime="10000">
+        <opcitem addr="DB6000.DBW13400" name="PLC_Control" type="AUTO" />
+        <opcitem addr="DB6000.DBW27400" name="PLC_Control" type="AUTO1" />
+        <dataitem addr="DB6000.DBW13402" name="PC_Control" type="" standard="PC控制字" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW27402" name="PC_Control2" type="" standard="PC控制字" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB12202.98" name="VIN" type="" standard="Pack总成号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB12302.98" name="EngineSN" type="" standard="发动机条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB12402.98" name="GearboxSN" type="" standard="变速箱条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB12502.98" name="TypeName" type="" standard="产品型号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB12602.38" name="TrayNum" type="" standard="托盘号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW12640" name="productNum" type="" standard="产品类别" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW12642" name="ReqStep" type="" standard="请求步数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW12644" name="ReqTool" type="" standard="请求步工具号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW12646" name="ReqQuan" type="" standard="请求步数量" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW12648" name="ReqFixt" type="" standard="请求步套筒号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW12650" name="ReqPrNo" type="" standard="请求步程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW12652" name="ReqReWK" type="" standard="请求步返工次数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW12654" name="ReqBoltNumber" type="" standard="请求步螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW12656" name="PreviousStation" type="" standard="前工位状态" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW12658" name="ReqStepType" type="" standard="当前步类型说明" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB12902.18" name="Torque" type="" standard="扭矩" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB12922.18" name="Angle" type="" standard="角度" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB12942.18" name="ProgNum" type="" standard="程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB12962.18" name="CycleNum" type="" standard="循环号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB12982.18" name="Result" type="" standard="结果" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW13000" name="BoltNumber" type="" standard="螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB26902.18" name="Torque02" type="" standard="扭矩" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB26922.18" name="Angle02" type="" standard="角度" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB26942.18" name="ProgNum02" type="" standard="程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB26962.18" name="CycleNum02" type="" standard="循环号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB26982.18" name="Result02" type="" standard="结果" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW27000" name="BoltNumber02" type="" standard="螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB13302.98" name="ScanCode" type="" standard="扫描枪扫描内容" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW13406" name="ErrorCode" type="" standard="错误代码" result="" reviewColumn="" reviewTable="" />
+        <alarm>
+          <item type="93" detail="加载产品配方失败，请检查该工位的配方是否正确！" />
+          <item type="94" detail="该总成已不合格！" />
+          <item type="95" detail="该总成没有对应的详细配方，请检查配方步序是否连续" />
+          <item type="96" detail="更新工位信息失败，请重新扫描" />
+          <item type="97" detail="小车上没有绑定总成" />
+          <item type="98" detail="校验总成出错，请检查校验规则" />
+          <item type="99" detail="解析总成号出错，请检查扫描的内容是否有误" />
+          <item type="100" detail="员工号校验失败，请检查配方当前步配置，或重新扫描" />
+          <item type="101" detail="追溯失败" />
+          <item type="102" detail="图号对比不通过" />
+          <item type="103" detail="小车号校验错误" />
+          <item type="104" detail="发动机号匹配出错，请检查配置" />
+          <item type="105" detail="没有扫描总成，请先扫描总成" />
+          <item type="106" detail="变速箱码匹配出错，请检查配置" />
+          <item type="107" detail="扭矩追溯失败！" />
+          <item type="108" detail="拧紧数据有为空！" />
+          <item type="109" detail="拧紧不合格！" />
+          <item type="110" detail="跳步失败，没有扫描总成！" />
+          <item type="111" detail="未知错误" />
+          <item type="112" detail="条码校验失败" />
+          <item type="113" detail="线外站触摸屏没有填入产品类型" />
+          <item type="114" detail="没有为线外站当前产品类型配置校验规则！" />
+        </alarm>
+        <boltName BoltNo="700" EQS="VW316_1-31-2107-01" ALimit="48-105" TLimit="20.7-25.3" KeypartName="发电机紧固-1" ProductionNum="1" />
+        <boltName BoltNo="701" EQS="VW316_1-31-2107-02" ALimit="48-105" TLimit="20.7-25.3" KeypartName="发电机紧固-2" ProductionNum="1" />
+        <boltName BoltNo="702" EQS="ERE" ALimit="ER" TLimit="ERE" KeypartName="ERE" ProductionNum="2" />
+      </station>
+      <station index="9" name="OP80" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="0" stationTime="10000">
+        <opcitem addr="DB6000.DBW15400" name="PLC_Control" type="PLC01" />
+        <dataitem addr="DB6000.DBW15402" name="PC_Control" type="" standard="PC控制字" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB14202.98" name="VIN" type="" standard="Pack总成号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB14302.98" name="EngineSN" type="" standard="发动机条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB14402.98" name="GearboxSN" type="" standard="变速箱条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB14502.98" name="TypeName" type="" standard="产品型号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB14602.38" name="TrayNum" type="" standard="托盘号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW14640" name="productNum" type="" standard="产品类别" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW14642" name="ReqStep" type="" standard="请求步数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW14644" name="ReqTool" type="" standard="请求步工具号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW14646" name="ReqQuan" type="" standard="请求步数量" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW14648" name="ReqFixt" type="" standard="请求步套筒号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW14650" name="ReqPrNo" type="" standard="请求步程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW14652" name="ReqReWK" type="" standard="请求步返工次数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW14654" name="ReqBoltNumber" type="" standard="请求步螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW14656" name="PreviousStation" type="" standard="前工位状态" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW14658" name="ReqStepType" type="" standard="当前步类型说明" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB14902.18" name="Torque" type="" standard="扭矩" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB14922.18" name="Angle" type="" standard="角度" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB14942.18" name="ProgNum" type="" standard="程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB14962.18" name="CycleNum" type="" standard="循环号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB14982.18" name="Result" type="" standard="结果" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW15000" name="BoltNumber" type="" standard="螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB15302.98" name="ScanCode" type="" standard="扫描枪扫描内容" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW15406" name="ErrorCode" type="" standard="错误代码" result="" reviewColumn="" reviewTable="" />
+        <alarm>
+          <item type="93" detail="加载产品配方失败，请检查该工位的配方是否正确！" />
+          <item type="94" detail="该总成已不合格！" />
+          <item type="95" detail="该总成没有对应的详细配方，请检查配方步序是否连续" />
+          <item type="96" detail="更新工位信息失败，请重新扫描" />
+          <item type="97" detail="小车上没有绑定总成" />
+          <item type="98" detail="校验总成出错，请检查校验规则" />
+          <item type="99" detail="解析总成号出错，请检查扫描的内容是否有误" />
+          <item type="100" detail="员工号校验失败，请检查配方当前步配置，或重新扫描" />
+          <item type="101" detail="追溯失败" />
+          <item type="102" detail="图号对比不通过" />
+          <item type="103" detail="小车号校验错误" />
+          <item type="104" detail="发动机号匹配出错，请检查配置" />
+          <item type="105" detail="没有扫描总成，请先扫描总成" />
+          <item type="106" detail="变速箱码匹配出错，请检查配置" />
+          <item type="107" detail="扭矩追溯失败！" />
+          <item type="108" detail="拧紧数据有为空！" />
+          <item type="109" detail="拧紧不合格！" />
+          <item type="110" detail="跳步失败，没有扫描总成！" />
+          <item type="111" detail="未知错误" />
+          <item type="112" detail="条码校验失败" />
+          <item type="113" detail="线外站触摸屏没有填入产品类型" />
+          <item type="114" detail="没有为线外站当前产品类型配置校验规则！" />
+        </alarm>
+      </station>
+      <station index="10" name="OP90" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="0" stationTime="10000" />
+      <station index="11" name="OP100-1" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="2" stationTime="10000" />
+      <station index="11" name="OP100-2" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="2" stationTime="10000" />
+      <station index="12" name="OP110-1" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="2" stationTime="10000">
+        <opcitem addr="DB6000.DBW21400" name="PLC_Control" type="PLC01" />
+        <dataitem addr="DB6000.DBW21402" name="PC_Control" type="" standard="PC控制字" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB20202.98" name="VIN" type="" standard="Pack总成号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB20302.98" name="EngineSN" type="" standard="发动机条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB20402.98" name="GearboxSN" type="" standard="变速箱条码" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB20502.98" name="TypeName" type="" standard="产品型号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB20602.38" name="TrayNum" type="" standard="托盘号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW20640" name="productNum" type="" standard="产品类别" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW20642" name="ReqStep" type="" standard="请求步数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW20644" name="ReqTool" type="" standard="请求步工具号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW20646" name="ReqQuan" type="" standard="请求步数量" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW20648" name="ReqFixt" type="" standard="请求步套筒号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW20650" name="ReqPrNo" type="" standard="请求步程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW20652" name="ReqReWK" type="" standard="请求步返工次数" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW20654" name="ReqBoltNumber" type="" standard="请求步螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW20656" name="PreviousStation" type="" standard="前工位状态" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW20658" name="ReqStepType" type="" standard="当前步类型说明" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB20902.18" name="Torque" type="" standard="扭矩" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB20922.18" name="Angle" type="" standard="角度" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB20942.18" name="ProgNum" type="" standard="程序号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB20962.18" name="CycleNum" type="" standard="循环号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB20982.18" name="Result" type="" standard="结果" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW21000" name="BoltNumber" type="" standard="螺栓编号" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBB21302.98" name="ScanCode" type="" standard="扫描枪扫描内容" result="" reviewColumn="" reviewTable="" />
+        <dataitem addr="DB6000.DBW21406" name="ErrorCode" type="" standard="错误代码" result="" reviewColumn="" reviewTable="" />
+        <alarm>
+          <item type="93" detail="加载产品配方失败，请检查该工位的配方是否正确！" />
+          <item type="94" detail="该总成已不合格！" />
+          <item type="95" detail="该总成没有对应的详细配方，请检查配方步序是否连续" />
+          <item type="96" detail="更新工位信息失败，请重新扫描" />
+          <item type="97" detail="小车上没有绑定总成" />
+          <item type="98" detail="校验总成出错，请检查校验规则" />
+          <item type="99" detail="解析总成号出错，请检查扫描的内容是否有误" />
+          <item type="100" detail="员工号校验失败，请检查配方当前步配置，或重新扫描" />
+          <item type="101" detail="追溯失败" />
+          <item type="102" detail="图号对比不通过" />
+          <item type="103" detail="小车号校验错误" />
+          <item type="104" detail="发动机号匹配出错，请检查配置" />
+          <item type="105" detail="没有扫描总成，请先扫描总成" />
+          <item type="106" detail="变速箱码匹配出错，请检查配置" />
+          <item type="107" detail="扭矩追溯失败！" />
+          <item type="108" detail="拧紧数据有为空！" />
+          <item type="109" detail="拧紧不合格！" />
+          <item type="110" detail="跳步失败，没有扫描总成！" />
+          <item type="111" detail="未知错误" />
+          <item type="112" detail="条码校验失败" />
+          <item type="113" detail="线外站触摸屏没有填入产品类型" />
+          <item type="114" detail="没有为线外站当前产品类型配置校验规则！" />
+        </alarm>
+      </station>
+      <station index="13" name="OP110-2" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="0" gunOrNot="1" autoOrNot="2" stationTime="10000" />
+      <station index="13" name="OP120" processOK="0" dataOK="0" type="0" recipeOrNot="1" agvOrNot="1" requentMESoutLineOrNot="0" lightLighOrNot="0" requentMESInLineOrNot="0" reviewOrNot="1" printOrNot="0" dataUploadMESOrNot="1" endSTorNot="1" gunOrNot="1" autoOrNot="0" stationTime="9999" />
+    </line>
+  </InfoConfig>
+  <dbConfig>
+    <DataSource>192.168.2.229</DataSource>
+    <InitialCatalog>BC1</InitialCatalog>
+    <UserID>sa</UserID>
+    <pwd>skq</pwd>
+    <BackupPath>D:\BACK</BackupPath>
+    <BackupPeriod>3.00:00:00</BackupPeriod>
+    <BackupTime>2016/5/9 星期一 19:31:08</BackupTime>
+  </dbConfig>
+  <serialPortConfig>
+    <PortName>COM1</PortName>
+    <BaudRate>9600</BaudRate>
+    <DataBits>8</DataBits>
+    <StopBits>1</StopBits>
+    <Parity>2</Parity>
+  </serialPortConfig>
+  <AGVConfig>
+    <AgvIp>192.168.2.22</AgvIp>
+    <AgvIport>1500</AgvIport>
+    <StationId>10</StationId>
+  </AGVConfig>
+  <sysConfig>
+    <Style>0</Style>
+    <SystemEnable>1</SystemEnable>
+    <ControlTagType>1</ControlTagType>
+    <LogKeepPeriod>180</LogKeepPeriod>
+    <AutoStart>0</AutoStart>
+    <WorkStatus>1</WorkStatus>
+    <startWithReport>0</startWithReport>
+    <StartWithLogin>1</StartWithLogin>
+    <QuitWithLogin>0</QuitWithLogin>
+    <FullScreen>0</FullScreen>
+    <selectRecord>0</selectRecord>
+    <recipeConfig>1</recipeConfig>
+  </sysConfig>
+  <opcserverConfig>
+    <ServerName>OPC.SimaticNet.1</ServerName>
+    <ServerIP>127.0.0.1</ServerIP>
+    <ClientName />
+  </opcserverConfig>
+  <reportConfig>
+    <Table name="AutoASS_Keypart" showName="零件报表">
+      <item columnName="id" showName="编号" />
+      <item columnName="dt" showName="日期" />
+      <item columnName="ST" showName="工位" />
+      <item columnName="SN" showName="总成号" />
+      <item columnName="WID" showName="员工号" />
+      <item columnName="Keypart_Name" showName="物料名称" />
+      <item columnName="Keypart_PN" showName="物料图号" />
+      <item columnName="Keypart_NUM" showName="物料批次号" />
+      <item columnName="CSC" showName="物料唯一码" />
+    </Table>
+    <Table name="AutoASS_Bolt" showName="螺栓报表">
+      <item columnName="id" showName="编号" />
+      <item columnName="dt" showName="日期" />
+      <item columnName="SN" showName="总成号" />
+      <item columnName="ST" showName="工位" />
+      <item columnName="A" showName="角度值" />
+      <item columnName="T" showName="扭矩值" />
+      <item columnName="Keypart_Name" showName="螺栓名称" />
+      <item columnName="R" showName="结果" />
+      <item columnName="WID" showName="员工号" />
+    </Table>
+    <Table name="C_ASM_BOLT_DETAIL_T" showName="二级总成螺栓报表">
+      <item columnName="id" showName="编号" />
+      <item columnName="dt" showName="日期" />
+      <item columnName="SN" showName="总成号" />
+      <item columnName="ST" showName="工位" />
+      <item columnName="A" showName="角度值" />
+      <item columnName="T" showName="扭矩值" />
+      <item columnName="A_LIMIT" showName="角度范围" />
+      <item columnName="T_LIMIT" showName="扭矩范围" />
+      <item columnName="Keypart_Name" showName="螺栓名称" />
+      <item columnName="R" showName="结果" />
+      <item columnName="WID" showName="员工号" />
+    </Table>
+    <Table name="R_ASM_TRACKING_T" showName="总成运行时表">
+      <item columnName="R_TRACKING_ID" showName="编号" />
+      <item columnName="DT" showName="日期" />
+      <item columnName="SN" showName="总成号" />
+      <item columnName="ST" showName="当前工位" />
+      <item columnName="BST" showName="前工位" />
+      <item columnName="TypeName" showName="产品类型" />
+      <item columnName="ProductNum" showName="产品型号" />
+      <item columnName="TrayNum" showName="小车号" />
+      <item columnName="STATUS" showName="产品状态" />
+    </Table>
+    <Table name="P_ASM_TRACKING_T" showName="总成永久性表">
+      <item columnName="P_TRACKING_T" showName="编号" />
+      <item columnName="DT" showName="日期" />
+      <item columnName="SN" showName="总成号" />
+      <item columnName="ST" showName="当前工位" />
+      <item columnName="BST" showName="前工位" />
+      <item columnName="TypeName" showName="产品类型" />
+      <item columnName="ProductNum" showName="产品型号" />
+      <item columnName="TrayNum" showName="小车号" />
+      <item columnName="STATUS" showName="产品状态" />
+    </Table>
+    <Table name="P_ASM_LEAKAGE_T" showName="气密性表">
+      <item columnName="ID" showName="编号" />
+      <item columnName="DT" showName="日期" />
+      <item columnName="SN" showName="总成号" />
+      <item columnName="ST" showName="工位" />
+      <item columnName="LEAKAGE_NAME" showName="名称" />
+      <item columnName="LEAKAGE_PV" showName="气压值" />
+      <item columnName="LEAKAGE_LV" showName="泄露值" />
+      <item columnName="EMP" showName="员工号" />
+    </Table>
+  </reportConfig>
+</configuration>
